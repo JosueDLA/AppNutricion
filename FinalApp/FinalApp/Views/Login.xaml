@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalApp.Views.Login"
+             Title="Iniciar Sesión">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Usuario" FontAttributes="Bold" Margin="10, 10, 10, 10"/>
+            <Entry x:Name="txtUsuario" Placeholder="Usuario" Keyboard="Text" />
+
+            <Label Text="Puesto" FontAttributes="Bold" Margin="10, 10, 10, 10"/>
+            <Picker x:Name="txtPuesto" Title="Seleccione Un Puesto">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Puesto 001</x:String>
+                        <x:String>Puesto 002</x:String>
+                        <x:String>Puesto 003</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Contraseña" FontAttributes="Bold" Margin="10, 10, 10, 10"/>
+            <Entry x:Name="txtPassword" Placeholder="Contraseña" IsPassword="true" />
+
+            <Button x:Name="btnIngresar" Text="Ingresar" Clicked="BtnAceptar_Clicked" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

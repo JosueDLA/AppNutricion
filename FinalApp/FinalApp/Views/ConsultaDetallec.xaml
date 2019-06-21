@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalApp.Views.ConsultaDetallec">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Nombre" FontAttributes="Bold" Margin="10, 10, 10, 10"/>
+                <Label x:Name="lblNombre" Text="" />
+
+                <Label Text="Apellido" FontAttributes="Bold" Margin="10, 10, 10, 10"/>
+                <Label x:Name="lblApellido" Text="" />
+
+                <Label Text="Altura" FontAttributes="Bold" Margin="10, 10, 10, 10"/>
+                <Label x:Name="lblAltura" Text="" />
+
+                <Label Text="Peso" FontAttributes="Bold" Margin="10, 10, 10, 10"/>
+                <Label x:Name="lblPeso" Text="" />
+
+                <Label Text="Edad" FontAttributes="Bold" Margin="10, 10, 10, 10"/>
+                <Label x:Name="lblEdad" Text="" />
+
+                <Label Text="Fecha Consulta" FontAttributes="Bold" Margin="10, 10, 10, 10"/>
+                <Label x:Name="lblFecha" Text="" />
+
+                <Label Text="Usuario" FontAttributes="Bold" Margin="10, 10, 10, 10"/>
+                <Label x:Name="lblUsuario" Text="" />
+
+                <Label Text="Detalle:" FontAttributes="Bold" Margin="10, 10, 10, 10"/>
+
+                <ListView x:Name="lstDetalle" ItemsSource="{Binding Detalle}" HasUnevenRows="True" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical" Spacing="10" Padding="10">
+                                    <Label Text="Diagnostico" FontAttributes="Bold" Margin="10,0,0,0" />
+                                    <Label Text="{Binding Diagnostico}" Margin="10,0,0,0"/>
+
+                                    <Label Text="Estado" FontAttributes="Bold" Margin="10,0,0,0"/>
+                                    <Label Text="{Binding Estado}" Margin="10,0,0,0"/>
+
+                                    <Label Text="Tratamiento" FontAttributes="Bold" Margin="10,0,0,0"/>
+                                    <Label Text="{Binding Tratamiento}" Margin="10,0,0,0"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

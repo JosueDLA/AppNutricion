@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalApp.Views.ConsultaInsert"
+             Title="Consulta">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label x:Name="lblId" IsVisible="false" />
+                <Label x:Name="lblEdad" IsVisible="false" />
+                
+                <Label Text="Nombre" FontAttributes="Bold" Margin="10, 10, 10, 10"/>
+                <Label x:Name="lblNombre" Text="" />
+
+                <Label Text="Apellido" FontAttributes="Bold" Margin="10, 10, 10, 10"/>
+                <Label x:Name="lblApellido" Text="" />
+
+                <Label Text="Altura cm" FontAttributes="Bold" Margin="10, 10, 10, 10"/>
+                <Entry x:Name="txtAltura" Placeholder="Altura" Keyboard="Numeric" />
+
+                <Label Text="Peso" FontAttributes="Bold" Margin="10, 10, 10, 10"/>
+                <Entry x:Name="txtPeso" Placeholder="Peso" Keyboard="Numeric" />
+
+                <Label Text="Diagnostico" FontAttributes="Bold" Margin="10, 10, 10, 10"/>
+                <Entry x:Name="txtDiagnostico" Placeholder="Diagnostico" />
+
+                <Label Text="Estado" FontAttributes="Bold" Margin="10, 10, 10, 10"/>
+                <Entry x:Name="txtEstado" Placeholder="Estado" />
+
+                <Label Text="Tratamiento" FontAttributes="Bold" Margin="10, 10, 10, 10"/>
+                <Entry x:Name="txtTratamiento" Placeholder="Tratamiento" />
+
+                <Button Text="Insertar" Clicked="BtnInsert_Clicked"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

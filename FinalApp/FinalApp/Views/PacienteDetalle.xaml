@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalApp.Views.PacienteDetalle"
+             Title="Paciente Detalle">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Nombre" FontAttributes="Bold" Margin="10, 10, 10, 10"/>
+                <Label x:Name="lblNombre" Text="" />
+
+                <Label Text="Apellido" FontAttributes="Bold" Margin="10, 10, 10, 10"/>
+                <Label x:Name="lblApellido" Text="" />
+
+                <Label Text="Fecha De Nacimiento" FontAttributes="Bold" Margin="10, 10, 10, 10"/>
+                <Label x:Name="lblFecha" Text="" />
+
+                <Label Text="DPI" FontAttributes="Bold" Margin="10, 10, 10, 10"/>
+                <Label x:Name="lblDpi" Text="" />
+
+                <Label Text="Telefono" FontAttributes="Bold" Margin="10, 10, 10, 10"/>
+                <Label x:Name="lblTelefono" Text="" />
+
+                <Label Text="Consultas:" FontAttributes="Bold" Margin="10, 10, 10, 10"/>
+
+                <ListView x:Name="lstConsultas" ItemsSource="{Binding Consultas}" ItemSelected="OnConsultaSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout VerticalOptions="FillAndExpand">
+                                    <Label Text="{Binding UsuarioNombre}" FontAttributes="Bold"/>
+                                    <Label Text="{Binding Fecha}"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

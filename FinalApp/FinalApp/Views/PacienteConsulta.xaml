@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalApp.Views.PacienteConsulta"
+             Title="Nueva Consulta">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lstPacientes" ItemsSource="{Binding Pacientes}" ItemSelected="OnPacienteSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding Nombre}" FontAttributes="Bold"/>
+                                <Label Text="{Binding Apellido}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
